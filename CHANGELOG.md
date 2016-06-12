@@ -1,8 +1,12 @@
-# v0.2
+# 1.2
+* removed redundant .gitignore
+* fixed versions
+
+# 1.1
 * removing backups older than 7 days
 * cleaning up the mess after script finish
 
-# v0.1
+# 1.0
 * repositories backups
 * configuration backups
 * google drive integration
