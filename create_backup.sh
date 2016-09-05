@@ -12,7 +12,8 @@ cd $HOME/backup
 # Create sub backup packages
 currentDayTimestamp=$(date +'%d%m%Y%H%M')
 
-7z a -t7z -mx9 $HOME/backup/tmp/backup_${vpsName}_opt_${currentDayTimestamp}.7z -r /opt/*
+7z a -t7z -mx9 $HOME/backup/tmp/backup_${vpsName}_teamspeak_${currentDayTimestamp}.7z -r /opt/teamspeak/*
+7z a -t7z -mx9 $HOME/backup/tmp/backup_${vpsName}_youtrack_${currentDayTimestamp}.7z -r /opt/youtrack/backups/youtrack/*
 7z a -t7z -mx9 $HOME/backup/tmp/backup_${vpsName}_apache_${currentDayTimestamp}.7z -r /etc/apache2/*
 7z a -t7z -mx9 $HOME/backup/tmp/backup_${vpsName}_supervisor_${currentDayTimestamp}.7z -r /etc/supervisor/*
 7z a -t7z -mx9 $HOME/backup/tmp/backup_${vpsName}_www_${currentDayTimestamp}.7z -r /var/www/*
