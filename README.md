@@ -14,3 +14,11 @@
 # Notes
 
 Remember to create a ```.driveignore``` file with ```/tmp``` entry in your Google Drive directory!
+
+# Troubleshooting
+
+## It produces weird output and doesn't work in general
+Probably the script has been commited from a Windows machine with wrong encoding. Try to convert the script to be Unix compatible.
+
+* ```sudo apt-get install dos2unix```
+* ```dos2unix /path/to/repo/create_backup.sh```

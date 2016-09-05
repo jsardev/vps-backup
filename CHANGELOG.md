@@ -1,3 +1,6 @@
+# 1.4
+* important information added to readme
+
 # 1.3
 * removed unused databases
 * changed mysql password
