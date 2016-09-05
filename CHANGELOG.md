@@ -1,3 +1,7 @@
+# 1.3
+* removed unused databases
+* changed mysql password
+
 # 1.2
 * removed redundant .gitignore
 * fixed versions
