@@ -7,6 +7,7 @@
 
 * Clone repository on your server
 * Create a directory in ```$HOME/backup```
+* Init drive in the backup directory
 * Add an entry in your server's crontab, i.e. ```00 04 * * * sh /path/to/repo/create_backup.sh```
 * Enjoy your backups!
 
