@@ -1,3 +1,6 @@
+# 2.1
+* readme improvements and fixes
+
 # 2.0
 * improved script to be generic and usable in many servers
 * parameters

@@ -6,13 +6,34 @@
 # How to install
 
 * Clone repository on your server
+* Set executable permissions to backup script `chmod +x /path/to/repo/create_backup.sh`
 * Create a directory in `$HOME/backup`
-* Init drive in the backup directory
-* Add `HOME` and `PATH` variables in your server's crontab, i.e. 
-    * Make sure that `drive` binary is in one of the `PATH` directories
-* Add an entry in your server's crontab, i.e. `00 04 * * * ./path/to/repo/create_backup.sh`
-    * Make sure that you run script with `./script.sh` syntax, not `sh ./script.sh`
+* Init `drive` in the backup directory
+* Add `HOME` and `PATH` variables in your server's crontab
+    * Make sure that `drive` binary is in the `PATH`
+* Add an entry in your server's crontab, i.e. `00 04 * * * bash /path/to/repo/create_backup.sh`
+    * Make sure you add all required parameters
+    * Make sure that you run script with `bash /path/to/script.sh` syntax, not `sh /path/to/script.sh`
 * Enjoy your backups!
+
+## Example crontab configuration
+
+    PATH=/usr/local/go/bin:/root/go:/root/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    HOME=/root
+
+    # m h  dom mon dow   command
+    00 06 * * * bash /tools/tools-vps-backup/create_backup.sh -n serverName -d /var/www -d /etc/hosts -m true -mp mySQLPassword
+    
+# Usage
+
+You can run the script with following parameters:
+
+* `-n/--name` - server name, i.e. `-n vps1` (required)
+* `-d/--directories` - backup directories, i.e. `-d /etc/hosts -d /var/www` (required)
+    * if you want to pass multiple directories, pass each directory in separate `-d` parameter
+    * directory files are taken recursively
+* `-m/--mysql` - mysql backup switch
+* `-mp/--mysql-password` - mysql root password
 
 # Notes
 
