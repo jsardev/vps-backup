@@ -1,3 +1,8 @@
+# 2.0
+* improved script to be generic and usable in many servers
+* parameters
+* pretty logs
+
 # 1.4
 * important information added to readme
 * better youtrack backups

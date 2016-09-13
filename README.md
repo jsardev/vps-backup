@@ -6,19 +6,22 @@
 # How to install
 
 * Clone repository on your server
-* Create a directory in ```$HOME/backup```
+* Create a directory in `$HOME/backup`
 * Init drive in the backup directory
-* Add an entry in your server's crontab, i.e. ```00 04 * * * sh /path/to/repo/create_backup.sh```
+* Add `HOME` and `PATH` variables in your server's crontab, i.e. 
+    * Make sure that `drive` binary is in one of the `PATH` directories
+* Add an entry in your server's crontab, i.e. `00 04 * * * ./path/to/repo/create_backup.sh`
+    * Make sure that you run script with `./script.sh` syntax, not `sh ./script.sh`
 * Enjoy your backups!
 
 # Notes
 
-Remember to create a ```.driveignore``` file with ```/tmp``` entry in your Google Drive directory!
+Remember to create a `.driveignore` file with `tmp` entry in your Google Drive directory!
 
 # Troubleshooting
 
 ## It produces weird output and doesn't work in general
 Probably the script has been commited from a Windows machine with wrong encoding. Try to convert the script to be Unix compatible.
 
-* ```sudo apt-get install dos2unix```
-* ```dos2unix /path/to/repo/create_backup.sh```
+* `sudo apt-get install dos2unix`
+* `dos2unix /path/to/repo/create_backup.sh`
