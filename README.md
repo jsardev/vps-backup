@@ -16,6 +16,14 @@
     * Make sure that you run script with `bash /path/to/script.sh` syntax, not `sh /path/to/script.sh`
 * Enjoy your backups!
 
+## Example crontab configuration
+
+    PATH=/usr/local/go/bin:/root/go:/root/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    HOME=/root
+
+    # m h  dom mon dow   command
+    00 06 * * * bash /tools/tools-vps-backup/create_backup.sh -n serverName -d /var/www -d /etc/hosts -m true -mp mySQLPassword
+    
 # Usage
 
 You can run the script with following parameters:
